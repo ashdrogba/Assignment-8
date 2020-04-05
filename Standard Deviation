@@ -1,0 +1,29 @@
+import numpy as np 
+    
+# 1D array  
+def finddev(arr):
+    print("arr : ", arr)  
+    print("std of arr : ", np.std(arr)) 
+  
+    print ("\nMore precision with float32") 
+    print("std of arr : ", np.std(arr, dtype = np.float32)) 
+  
+    print ("\nMore accuracy with float64") 
+    print("std of arr : ", np.std(arr, dtype = np.float64)) 
+
+    
+
+def main():
+    # Enter length of an array
+    length = int(input("Size of an array:")) 
+    
+    # Define and enter array
+    newarray = []
+    for i in range(length):
+        x = int(input("The elements of an array"))
+        newarray.append(x)
+    
+    finddev(newarray)
+    
+if __name__ =="__main__":
+    main()
